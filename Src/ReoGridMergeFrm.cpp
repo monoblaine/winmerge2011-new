@@ -575,7 +575,8 @@ LRESULT CReoGridMergeFrame::OnWndMsg<WM_COMMAND>(WPARAM wParam, LPARAM lParam)
 			}
 		}
 		break;
-	case ID_NEXT_PANE:
+	case ID_RIGHT_PANE:
+	case ID_LEFT_PANE:
 	case ID_WINDOW_CHANGE_PANE:
 		if (HWND const hwnd = GetAccessibleHWnd(
 			GetAccessibleState(m_spAccLeftHeader) & (STATE_SYSTEM_FOCUSED | STATE_SYSTEM_READONLY)

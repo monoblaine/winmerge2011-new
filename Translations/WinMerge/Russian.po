@@ -576,8 +576,8 @@ msgstr "Закрыть все"
 #: Merge.rc:693
 #: Merge.rc:880
 #, c-format
-msgid "Change &Pane\tAlt+PgDown"
-msgstr "Переключить &Окно\tAlt+PgDown"
+msgid "Change &Pane\tF12"
+msgstr "Переключить &Окно\tF12"
 
 #: Merge.rc:122
 #: Merge.rc:246

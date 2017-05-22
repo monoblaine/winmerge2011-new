@@ -575,8 +575,8 @@ msgstr "Stä&ng alla"
 #: Merge.rc:693
 #: Merge.rc:880
 #, c-format
-msgid "Change &Pane\tAlt+PgDown"
-msgstr "Växla fil\tAlt+PgDown"
+msgid "Change &Pane\tF12"
+msgstr "Växla fil\tF12"
 
 #: Merge.rc:122
 #: Merge.rc:246

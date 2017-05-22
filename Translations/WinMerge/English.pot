@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://bugs.winmerge.org/\n"
-"POT-Creation-Date: 2021-06-05 11:30+0000\n"
+"POT-Creation-Date: 2021-08-30 00:43+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <winmerge-translate@lists.sourceforge.net>\n"
@@ -564,14 +564,11 @@ msgid "Clo&se All"
 msgstr ""
 
 #: Merge.rc:120
-#: Merge.rc:244
-#: Merge.rc:436
-#: Merge.rc:544
 #: Merge.rc:623
 #: Merge.rc:693
 #: Merge.rc:880
 #, c-format
-msgid "Change &Pane\tAlt+PgDown"
+msgid "Change &Pane\tF12"
 msgstr ""
 
 #: Merge.rc:122
@@ -876,6 +873,13 @@ msgstr ""
 #: Merge.rc:782
 #, c-format
 msgid "&Clear All Bookmarks\tCtrl+Shift+F2"
+msgstr ""
+
+#: Merge.rc:244
+#: Merge.rc:436
+#: Merge.rc:544
+#, c-format
+msgid "Change &Pane\tF6"
 msgstr ""
 
 #: Merge.rc:318
@@ -1258,7 +1262,7 @@ msgstr ""
 
 #: Merge.rc:826
 #, c-format
-msgid "Wr&ap Lines"
+msgid "Wr&ap Lines\tCtrl+Shift+W"
 msgstr ""
 
 #: Merge.rc:827
@@ -3484,12 +3488,12 @@ msgstr ""
 
 #: Merge.rc:2097
 #, c-format
-msgid "Switch to the next window pane\nNext Pane"
+msgid "Switch to the right window pane\nRight Pane"
 msgstr ""
 
 #: Merge.rc:2098
 #, c-format
-msgid "Switch back to the previous window pane\nPrevious Pane"
+msgid "Switch to the left window pane\nLeft Pane"
 msgstr ""
 
 #: Merge.rc:2099
