@@ -2094,8 +2094,8 @@ STRINGTABLE
     ID_FILE_MRU_FILE14            "Merge.rc:2094"
     ID_FILE_MRU_FILE15            "Merge.rc:2095"
     ID_FILE_MRU_FILE16            "Merge.rc:2096"
-    ID_NEXT_PANE                  "Merge.rc:2097"
-    ID_PREV_PANE                  "Merge.rc:2098"
+    ID_RIGHT_PANE                 "Merge.rc:2097"
+    ID_LEFT_PANE                  "Merge.rc:2098"
     ID_WINDOW_CASCADE             "Merge.rc:2099"
     ID_WINDOW_TILE_HORZ           "Merge.rc:2100"
     ID_WINDOW_TILE_VERT           "Merge.rc:2101"
@@ -2627,8 +2627,9 @@ IDR_MAINFRAME ACCELERATORS
     VK_END,         ID_LASTDIFF, VIRTKEY, ALT
     VK_F5,          ID_REFRESH, VIRTKEY
     VK_F5,          ID_DIR_RESCAN, VIRTKEY, CONTROL
-    VK_NEXT,        ID_NEXT_PANE, VIRTKEY, ALT
-    VK_PRIOR,       ID_PREV_PANE, VIRTKEY, ALT
+    VK_NEXT,        ID_RIGHT_PANE, VIRTKEY, ALT
+    VK_PRIOR,       ID_LEFT_PANE, VIRTKEY, ALT
+    VK_F12,         ID_WINDOW_CHANGE_PANE, VIRTKEY
     VK_F6,          ID_DIFF_PANE, VIRTKEY
     VK_F9,          ID_FILE_MERGINGMODE, VIRTKEY
     VK_HOME,        ID_FIRSTDIFF, VIRTKEY, ALT

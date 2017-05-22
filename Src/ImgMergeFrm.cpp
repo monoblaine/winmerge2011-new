@@ -1104,7 +1104,8 @@ LRESULT CImgMergeFrame::OnWndMsg<WM_COMMAND>(WPARAM wParam, LPARAM lParam)
 		OnFileSaveAsRight();
 		UpdateCmdUI();
 		break;
-	case ID_NEXT_PANE:
+	case ID_RIGHT_PANE:
+	case ID_LEFT_PANE:
 	case ID_WINDOW_CHANGE_PANE:
 		OnWindowChangePane();
 		UpdateCmdUI();
