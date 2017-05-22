@@ -795,8 +795,9 @@ LRESULT CChildFrame::OnWndMsg<WM_COMMAND>(WPARAM wParam, LPARAM lParam)
 		AlignScrollPositions();
 		break;
 	case ID_NEXT_PANE:
+	case ID_PREV_PANE:
 	case ID_WINDOW_CHANGE_PANE:
-		if (HWindow *pWndNext = GetNextDlgTabItem(HWindow::GetFocus()))
+		if (HWindow *pWndNext = GetNextDlgTabItem(HWindow::GetFocus(), id == ID_PREV_PANE))
 		{
 			pWndNext->SetFocus();
 			CMergeEditView *const pNewActiveView = GetActiveMergeView();
@@ -809,6 +810,20 @@ LRESULT CChildFrame::OnWndMsg<WM_COMMAND>(WPARAM wParam, LPARAM lParam)
 				pNewActiveView->SetCursorPos(ptCursor);
 				pNewActiveView->SetAnchor(ptCursor);
 				pNewActiveView->SetSelection(ptCursor, ptCursor);
+			}
+		}
+		break;
+	case ID_DIFF_PANE: {
+			CMergeDiffDetailView *leftDetailView = GetLeftDetailView();
+			CMergeDiffDetailView *rightDetailView = GetRightDetailView();
+		
+			if (leftDetailView && rightDetailView) {
+				if (!leftDetailView->HasFocus() || rightDetailView->HasFocus()) {
+					leftDetailView->SetFocus();
+				}
+				else {
+					rightDetailView->SetFocus();
+				}
 			}
 		}
 		break;

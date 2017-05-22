@@ -576,8 +576,8 @@ msgstr "모두 닫기(&S)"
 #: Merge.rc:693
 #: Merge.rc:880
 #, c-format
-msgid "Change &Pane\tF6"
-msgstr "창 전환(&P)\tF6"
+msgid "Change &Pane\tAlt+PgDown"
+msgstr "창 전환(&P)\tAlt+PgDown"
 
 #: Merge.rc:122
 #: Merge.rc:246
@@ -1263,7 +1263,7 @@ msgstr ""
 
 #: Merge.rc:826
 #, c-format
-msgid "Wr&ap Lines"
+msgid "Wr&ap Lines\tCtrl+Shift+W"
 msgstr "자동 줄 바꿈(&R)"
 
 #: Merge.rc:827
