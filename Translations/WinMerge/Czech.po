@@ -575,8 +575,8 @@ msgstr "Z&avøít vše"
 #: Merge.rc:693
 #: Merge.rc:880
 #, c-format
-msgid "Change &Pane\tF6"
-msgstr "Z&mìnit panel\tF6"
+msgid "Change &Pane\tAlt+PgDown"
+msgstr "Z&mìnit panel\tAlt+PgDown"
 
 #: Merge.rc:122
 #: Merge.rc:246
@@ -1262,8 +1262,8 @@ msgstr ""
 
 #: Merge.rc:826
 #, c-format
-msgid "Wr&ap Lines"
-msgstr "Zala&movat øádky"
+msgid "Wr&ap Lines\tCtrl+Shift+W"
+msgstr "Zala&movat øádky\tCtrl+Shift+W"
 
 #: Merge.rc:827
 #, c-format
