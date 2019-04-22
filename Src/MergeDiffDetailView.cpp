@@ -59,6 +59,7 @@ void CMergeDiffDetailView::RefreshOptions()
 	SetViewLineNumbers(m_pDocument->GetLineNumberDigits());
 	// Tab size is set at buffer level, so no need to set it here again
 	SetViewTabs(COptionsMgr::Get(OPT_VIEW_WHITESPACE));
+	SetWordWrapping(COptionsMgr::Get(OPT_WORDWRAP));
 	SetViewEols(COptionsMgr::Get(OPT_VIEW_WHITESPACE),
 		COptionsMgr::Get(OPT_ALLOW_MIXED_EOL) || m_pDocument->IsMixedEOL(m_nThisPane));
 	SetFont(theApp.m_pMainWnd->m_lfDiff, COptionsMgr::Get(OPT_CROSS_HATCH_DELETED_LINES));
@@ -358,5 +359,4 @@ void CMergeDiffDetailView::OnUpdateCaret(bool bShowHide)
 void CMergeDiffDetailView::DocumentsLoaded()
 {
 	RefreshOptions();
-	SetWordWrapping(FALSE);
 }
