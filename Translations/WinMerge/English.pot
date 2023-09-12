@@ -1162,7 +1162,7 @@ msgstr ""
 
 #: Merge.rc:798
 #, c-format
-msgid "Syntax Highlight"
+msgid "&Syntax Highlight"
 msgstr ""
 
 #: Merge.rc:800

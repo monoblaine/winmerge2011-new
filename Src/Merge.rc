@@ -795,7 +795,7 @@ IDR_MERGEDOCTYPE MENU
             MENUITEM "Zoom &Out\tCtrl+-", ID_VIEW_ZOOMOUT
             MENUITEM "&Normal\tCtrl+*", ID_VIEW_ZOOMNORMAL
         }
-        POPUP "Syntax Highlight"
+        POPUP "&Syntax Highlight"
         {
             MENUITEM "No Highlighting", ID_COLORSCHEME_FIRST
             MENUITEM SEPARATOR
