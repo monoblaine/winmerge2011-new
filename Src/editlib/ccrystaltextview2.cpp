@@ -185,6 +185,7 @@ void CCrystalTextView::MoveWordRight(BOOL bSelect)
 
 	LPCTSTR const pszChars = GetLineChars(m_ptCursorPos.y);
 	int nPos = m_ptCursorPos.x;
+	int originalNPos = nPos;
 	if (xisalnum(pszChars[nPos]))
 	{
 		while (nPos < nLength && xisalnum(pszChars[nPos]))
@@ -196,8 +197,10 @@ void CCrystalTextView::MoveWordRight(BOOL bSelect)
 			++nPos;
 	}
 
-	while (nPos < nLength && xisspace(pszChars[nPos]))
-		++nPos;
+	if (originalNPos == nPos) {
+		while (nPos < nLength && xisspace(pszChars[nPos]))
+			++nPos;
+	}
 
 	m_ptCursorPos.x = nPos;
 	m_nIdealCharPos = CalculateActualOffset(m_ptCursorPos.y, m_ptCursorPos.x);
