@@ -200,10 +200,6 @@ BOOL SelectFolder(HWND parent, String &path, UINT titleid)
  */
 static int CALLBACK BrowseCallbackProc(HWND hwnd, UINT uMsg, LPARAM lParam, LPARAM lpData)
 {
-	if (uMsg == BFFM_INITIALIZED)
-	{
-		SendMessage(hwnd, BFFM_SETSELECTION, TRUE, lpData);
-	}
 	return 0;
 }
 
