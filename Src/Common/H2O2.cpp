@@ -162,12 +162,22 @@ OWindow::~OWindow()
 		DestroyWindow();
 }
 
+unsigned int linesPerScroll = 0;
+
 void OWindow::OnSettingChange()
 {
 	WNDCLASS wc;
 	m_button = static_cast<ATOM>(GetClassInfo(NULL, WC_BUTTON, &wc));
 	m_highcontrast.cbSize = sizeof m_highcontrast;
 	SystemParametersInfo(SPI_GETHIGHCONTRAST, sizeof m_highcontrast, &m_highcontrast, FALSE);
+	::SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, &linesPerScroll, 0);
+}
+
+unsigned int H2O::GetLinesPerScroll() {
+	if (linesPerScroll == 0) {
+		::SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, &linesPerScroll, 0);
+	}
+	return linesPerScroll;
 }
 
 struct DrawItemStruct_WebLinkButton : DRAWITEMSTRUCT
