@@ -485,6 +485,7 @@ namespace H2O
 	// Utility functions
 	void __declspec(noreturn) ThrowJsonException(const char *);
 	HWND GetTopLevelParent(HWND);
+	unsigned int GetLinesPerScroll();
 	HIMAGELIST Create3StateImageList();
 	void GetDesktopWorkArea(HWND, LPRECT);
 	void CenterWindow(HWindow *, HWindow *pParent = NULL);
