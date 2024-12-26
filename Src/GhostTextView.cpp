@@ -387,7 +387,7 @@ BOOL CGhostTextView::OnMouseWheel(WPARAM wParam, LPARAM lParam)
 				--si.nPage;
 				si.nMax -= si.nPage;
 				// new horz pos
-				si.nPos -= zDelta / 120;
+				si.nPos -= zDelta / 40;
 				if (si.nPos > si.nMax)
 					si.nPos = si.nMax;
 				if (si.nPos < si.nMin)
