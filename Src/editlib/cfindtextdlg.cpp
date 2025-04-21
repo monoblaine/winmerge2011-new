@@ -157,7 +157,6 @@ void CFindTextDlg::OnOK()
 		return;
 	}
 	m_pBuddy->HighlightText(ptFoundPos, m_pBuddy->m_nLastFindWhatLen, bCursorToLeft);
-	EndDialog(IDOK);
 }
 
 void CFindTextDlg::OnChangeSelected()
