@@ -232,7 +232,7 @@ void CEditReplaceDlg::OnEditSkip()
 	{
 		m_ptFoundAt = m_ptCurrentPos;
 		m_nCaptures = DoHighlightText(TRUE);
-		SetDefID(m_nCaptures >= 0 ? IDC_EDIT_REPLACE : IDC_EDIT_SKIP);
+		SetDefID(IDC_EDIT_SKIP);
 		return;
 	}
 	if (m_pBuddy->m_nLastFindWhatLen)
@@ -250,7 +250,7 @@ void CEditReplaceDlg::OnEditSkip()
 		return;
 	}
 	m_nCaptures = DoHighlightText(TRUE);
-	SetDefID(m_nCaptures >= 0 ? IDC_EDIT_REPLACE : IDC_EDIT_SKIP);
+	SetDefID(IDC_EDIT_SKIP);
 }
 
 void CEditReplaceDlg::ReplaceSelection(bool bGroupWithPrevious)
@@ -334,7 +334,7 @@ void CEditReplaceDlg::OnEditReplace()
 	{
 		m_ptFoundAt = m_ptCurrentPos;
 		m_nCaptures = DoHighlightText(TRUE);
-		SetDefID(m_nCaptures >= 0 ? IDC_EDIT_REPLACE : IDC_EDIT_SKIP);
+		SetDefID(IDC_EDIT_SKIP);
 		return;
 	}
 
