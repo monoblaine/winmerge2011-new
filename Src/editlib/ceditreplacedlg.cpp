@@ -130,7 +130,7 @@ LRESULT CEditReplaceDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_SHOWWINDOW:
 		if (wParam != FALSE)
-			CenterWindow(m_pWnd, m_pBuddy->m_pWnd);
+			MoveWindowToTopRight(m_pWnd, m_pBuddy->m_pWnd);
 		break;
 	}
 	return ODialog::WindowProc(message, wParam, lParam);

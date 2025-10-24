@@ -742,6 +742,37 @@ void H2O::CenterWindow(HWindow *pWnd, HWindow *pParent)
 	pWnd->SetWindowPos(NULL, rc.left, rc.top, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE);
 }
 
+void H2O::MoveWindowToTopRight(HWindow *pWnd, HWindow *pParent)
+// Moves this window over its parent's top right edge
+{
+	RECT rc;
+	pWnd->GetWindowRect(&rc);
+	RECT rcBounds;
+	GetDesktopWorkArea(pWnd->m_hWnd, &rcBounds);
+	// Get the parent window dimensions (parent could be the desktop)
+	RECT rcParent = rcBounds;
+	if ((pParent != NULL) || (pParent = pWnd->GetParent()) != NULL)
+		pParent->GetWindowRect(&rcParent);
+	// Calculate point to top-right align the dialog over the portion of parent window on this monitor
+	::IntersectRect(&rcParent, &rcParent, &rcBounds);
+	rc.right -= rc.left;
+	rc.bottom -= rc.top;
+	rc.left = rcParent.right - rc.right;
+	rc.top = rcParent.top;
+	rcBounds.right -= rc.right;
+	rcBounds.bottom -= rc.bottom;
+	// Keep the dialog within the work area
+	if (rc.left < rcBounds.left)
+		rc.left = rcBounds.left;
+	if (rc.left > rcBounds.right)
+		rc.left = rcBounds.right;
+	if (rc.top < rcBounds.top)
+		rc.top = rcBounds.top;
+	if (rc.top > rcBounds.bottom)
+		rc.top = rcBounds.bottom;
+	pWnd->SetWindowPos(NULL, rc.left, rc.top, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE);
+}
+
 static std::vector<String> rgDispinfoText(2); // used in function below
 
 /**
