@@ -135,7 +135,7 @@ void CFindTextDlg::OnOK()
 		dwSearchFlags |= FIND_WHOLE_WORD;
 	if (m_bRegExp)
 		dwSearchFlags |= FIND_REGEXP;
-	if (m_nDirection == 0)
+	if (m_nDirection == 0 || ::GetAsyncKeyState(VK_SHIFT) < 0)
 	{
 		dwSearchFlags |= FIND_DIRECTION_UP;
 		// When finding upwards put cursor to begin of selection
