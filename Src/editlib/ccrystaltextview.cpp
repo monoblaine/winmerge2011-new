@@ -3762,7 +3762,7 @@ void CCrystalTextView::OnEditFind()
 	dlg.m_bMatchCase = (dwFlags & FIND_MATCH_CASE) != 0;
 	dlg.m_bWholeWord = (dwFlags & FIND_WHOLE_WORD) != 0;
 	dlg.m_bRegExp = (dwFlags & FIND_REGEXP) != 0;
-	dlg.m_nDirection = (dwFlags & FIND_DIRECTION_UP) == 0;
+	dlg.m_nDirection = 1;
 	dlg.m_bNoWrap = (dwFlags & FIND_NO_WRAP) != 0;
 	dlg.m_sText = m_strLastFindWhat;
 
