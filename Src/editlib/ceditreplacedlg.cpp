@@ -475,7 +475,6 @@ void CEditReplaceDlg::OnEditReplaceAll()
 			}
 		}
 	}
-	m_pBuddy->EnsureSelectionVisible(TRUE);
 	// Let user know how many strings were replaced
 	LanguageSelect.FormatStrings(
 		IDS_NUM_REPLACED, NumToStr(nNumReplaced).c_str()
